@@ -1,6 +1,8 @@
 #ifndef GHERKIN_GHERKIN_DOCUMENT_H_
 #define GHERKIN_GHERKIN_DOCUMENT_H_
 
+
+#include "gherkin-c-port.h"
 #include "ast.h"
 #include "feature.h"
 #include "comment.h"
@@ -18,7 +20,7 @@ typedef struct GherkinDocument {
 
 const GherkinDocument* GherkinDocument_new(const Feature* feature, const Comments* comments);
 
-void GherkinDocument_delete(const GherkinDocument* gherkin_document);
+GHERKIN_C_API_ void GherkinDocument_delete(const GherkinDocument* gherkin_document);
 
 #ifdef __cplusplus
 }
